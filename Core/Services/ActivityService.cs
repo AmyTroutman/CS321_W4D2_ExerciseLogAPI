@@ -36,9 +36,10 @@ namespace CS321_W4D2_ExerciseLogAPI.Core.Services
             return activity;
         }
 
-        void Remove(Activity activity)
+        public void Remove(Activity activity)
         {
             _activityRepo.Remove(activity);
         }
+
     }
 }

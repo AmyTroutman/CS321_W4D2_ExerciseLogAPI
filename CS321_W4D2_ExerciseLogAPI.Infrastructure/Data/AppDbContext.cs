@@ -16,7 +16,7 @@ namespace CS321_W4D2_ExerciseLogAPI.Infrastructure.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=../CS321_W4D2_BookAPI.Infrastructure/ExercisingLog.db");
+            optionsBuilder.UseSqlite("Data Source=../CS321_W4D2_ExerciseLogAPI.Infrastructure/ExercisingLog.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

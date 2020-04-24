@@ -9,5 +9,6 @@ namespace CS321_W4D2_ExerciseLogAPI.Core.Services
         Activity Get(int id);
         IEnumerable<Activity> GetAll();
         Activity Update(Activity updateActivity);
+        void Remove(Activity activity);
     }
 }
