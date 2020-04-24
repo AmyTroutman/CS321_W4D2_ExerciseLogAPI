@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CS321_W4D2_ExerciseLogAPI.Core.Services
 {
-    interface IUserService
+    public interface IUserService
     {
         User Add(User newUser);
         User Get(int id);

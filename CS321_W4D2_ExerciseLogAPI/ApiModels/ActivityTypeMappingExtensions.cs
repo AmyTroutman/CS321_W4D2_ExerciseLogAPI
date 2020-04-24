@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CS321_W4D2_ExerciseLogAPI.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,7 +13,8 @@ namespace CS321_W4D2_ExerciseLogAPI.ApiModels
             return new ActivityTypeModel
             {
                 Id = ActivityType.Id,
-                // TODO: fill in property mappings
+                Name = ActivityType.Name,
+                RecordType = ActivityType.RecordType
             };
         }
 
@@ -21,7 +23,8 @@ namespace CS321_W4D2_ExerciseLogAPI.ApiModels
             return new ActivityType
             {
                 Id = ActivityTypeModel.Id,
-                // TODO: fill in property mappings
+                Name = ActivityTypeModel.Name,
+                RecordType = ActivityTypeModel.RecordType
             };
         }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CS321_W4D2_ExerciseLogAPI.Core.Services
 {
-    interface IActiviyTypeService
+    public interface IActiviyTypeService
     {
         ActivityType Add(ActivityType newActivityType);
         ActivityType Get(int id);
