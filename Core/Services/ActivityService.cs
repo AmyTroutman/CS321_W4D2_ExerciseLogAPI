@@ -20,7 +20,7 @@ namespace CS321_W4D2_ExerciseLogAPI.Core.Services
         {
             // todo fix this
             var activityType = _activityTypeRepo.Get(Activity.ActivityTypeId);
-         
+            // todo fix this
             if (activityType.RecordType == RecordType.DurationAndDistance
                 && Activity.Distance <= 0)
             {
