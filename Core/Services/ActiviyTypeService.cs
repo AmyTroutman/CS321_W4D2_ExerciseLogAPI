@@ -6,7 +6,7 @@ using CS321_W4D2_ExerciseLogAPI.Core.Models;
 namespace CS321_W4D2_ExerciseLogAPI.Core.Services
 {
 
-    class ActiviyTypeService : IActiviyTypeService
+    public class ActiviyTypeService : IActiviyTypeService
     {
         private readonly IActivityTypeRepository _activityTypeRepo;
 

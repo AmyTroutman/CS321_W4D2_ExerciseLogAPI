@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CS321_W4D2_ExerciseLogAPI.Infrastructure.Data
 {
-    class ActivityRepository : IActivityRepository
+    public class ActivityRepository : IActivityRepository
     {
         private readonly AppDbContext _dbContext;
         public ActivityRepository(AppDbContext dbContext)

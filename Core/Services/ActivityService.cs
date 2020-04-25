@@ -5,17 +5,33 @@ using System.Text;
 
 namespace CS321_W4D2_ExerciseLogAPI.Core.Services
 {
-    class ActivityService : IActivityService
+    public class ActivityService : IActivityService
     {
-        private readonly IActivityRepository _activityRepo;
+        private IActivityRepository _activityRepo;
+        private IActivityTypeRepository _activityTypeRepo;
 
-        public ActivityService(IActivityRepository activityRepo)
+        public ActivityService(IActivityRepository activityRepo, IActivityTypeRepository activityTypeRepo)
         {
             _activityRepo = activityRepo;
+            _activityTypeRepo = activityTypeRepo;
         }
 
         public Activity Add(Activity newActivity)
         {
+            // todo fix this
+            var activityType = _activityTypeRepo.Get(Activity.ActivityTypeId);
+         
+            if (activityType.RecordType == RecordType.DurationAndDistance
+                && Activity.Distance <= 0)
+            {
+                throw new ApplicationException("You must supply a Distance for this activity.");
+            }
+            
+            if (Activity.Duration <= 0)
+            {
+                throw new ApplicationException("You must supply a Duration for this activity.");
+            }
+
             _activityRepo.Add(newActivity);
             return newActivity;
         }

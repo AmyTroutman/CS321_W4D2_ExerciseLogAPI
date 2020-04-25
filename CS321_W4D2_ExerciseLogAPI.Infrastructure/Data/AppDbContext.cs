@@ -7,7 +7,7 @@ using CS321_W4D2_ExerciseLogAPI.Core.Models;
 
 namespace CS321_W4D2_ExerciseLogAPI.Infrastructure.Data
 {
-    class AppDbContext : DbContext
+    public class AppDbContext : DbContext
     {
         //users, activities, activityTypes
         public DbSet<User> Users { get; set; }
